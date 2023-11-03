@@ -12,6 +12,6 @@
 
 "Boxicons"
 
-# dependencies
+# Dependencies
 
 "Swiperjs"
