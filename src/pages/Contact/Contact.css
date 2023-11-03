@@ -1,0 +1,127 @@
+.contact-card {
+	width: 100%;
+	background-color: var(--bg-white);
+	margin-bottom: 20px;
+	margin-top: 50px;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+
+.contact-card-pics {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+	transition: var(--trans-05);
+	display: flex;
+}
+
+.contact-card:hover {
+	border-radius: 0;
+}
+
+.contact-card:hover .contact-card-pics {
+	border-radius: 0;
+}
+
+.profil-image {
+	display: none;
+}
+
+.contact-image {
+	border-radius: 10px 10px 0 0;
+}
+
+.contact-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.contact-card-text {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+
+.pics-text {
+	width: 100%;
+	text-align: center;
+	padding: 40px;
+}
+
+.pics-text h2 {
+	font-size: 30px;
+	font-weight: 700;
+	color: var(--text-black);
+	margin-bottom: 10px;
+}
+.pics-text .tel {
+	font-size: 22px;
+	font-weight: 400;
+	color: var(--subheading);
+}
+
+.pics-text .email {
+	font-size: 22px;
+	font-weight: 400;
+	color: var(--subheading);
+}
+
+.pics-text .reseaux {
+	font-size: 2.5rem;
+	text-decoration: none;
+	margin-top: 20px;
+}
+
+.pics-text .reseaux i {
+	padding: 7px;
+	color: var(--text-black);
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------------------------- Responsive Mobile-first ------------------------ */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+	.contact-container {
+		width: 90%;
+	}
+	.contact-wrapper {
+		width: 90%;
+	}
+	.contact-card {
+		min-height: 500px;
+		width: 100%;
+		margin-top: 80px;
+	}
+	.profil-image {
+		display: block;
+		border-radius: 10px 0 0 0;
+	}
+	.profil-image,
+	.contact-image {
+		width: 50%;
+		height: 500px;
+	}
+	.profil-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.contact-image {
+		border-radius: 0 10px 0 0;
+	}
+	.contact-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.pics-text .tel {
+		margin-bottom: 10px;
+	}
+}
+

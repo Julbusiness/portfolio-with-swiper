@@ -1,0 +1,240 @@
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* Colors */
+	--bg-dark: #191d20;
+	--bg-white: rgba(255, 255, 255, 1);
+	--text-white: rgba(255, 255, 255, 1);
+	--text-black: rgba(34, 34, 34, 1);
+	--border-grey: rgba(187, 187, 187, 1);
+	--border-black: rgba(34, 34, 34, 0.6);
+	--text-menu-initial: rgba(151, 151, 151, 1);
+	--subheading: rgba(102, 102, 102, 1);
+	--icons: rgba(255, 255, 255, 0.7);
+
+	/* Transition */
+	--trans-02: all 0.2s ease;
+	--trans-03: all 0.3s ease;
+	--trans-04: all 0.4s ease;
+	--trans-05: all 0.5s ease;
+
+	overflow-x: hidden;
+
+	height: 100vh;
+	
+}
+
+/* ---------------------------- Factorisation css --------------------------- */
+
+.home,
+.about,
+.skills,
+.portfolio,
+.logo,
+.visitCard,
+.web,
+.photo,
+.confiance,
+.contact,
+.notfound {
+	position: relative;
+	bottom: 75px;
+	width: 100%;
+	min-height: calc(100vh - 75px);
+	transition: var(--trans-05);
+	z-index: 101;
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 75px;
+}
+
+.home-container,
+.about-container,
+.skills-container,
+.portfolio-container,
+.logo-container,
+.photo-container,
+.visitCard-container,
+.web-container,
+.confiance-container,
+.contact-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 25px;
+	position: relative;
+	width: 100%;
+}
+
+.skills-wrapper,
+.portfolio-wrapper,
+.logo-wrapper,
+.photo-wrapper,
+.visitCard-wrapper,
+.web-wrapper,
+.confiance-wrapper,
+.contact-wrapper {
+	width: 90%;
+}
+
+.home .title-start,
+.skills .title-start,
+.portfolio .title-start,
+.logo .title-start,
+.visitCard .title-start,
+.web .title-start,
+.photo .title-start,
+.confiance .title-start,
+.contact .title-start {
+	width: 100%;
+}
+
+.sidebar.open .text {
+	display: none;
+	transition: var(--trans-05);
+}
+
+.sidebar ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* ------------------------- Responsive Mobile-first ------------------------ */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+.home,
+.about,
+.skills,
+.portfolio,
+.logo,
+.visitCard,
+.web,
+.photo,
+.confiance,
+.contact,
+.notfound {
+	position: relative;
+	left: 60px;
+	width: calc(100vw - 60px);
+	min-height: calc(100vh - 125px);
+	transition: var(--trans-05);
+	z-index: 101;
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.home-container,
+.about-container,
+.skills-container,
+.portfolio-container,
+.logo-container,
+.photo-container,
+.visitCard-container,
+.web-container,
+.confiance-container,
+.contact-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	position: relative;
+}
+
+.sidebar.open ~ .home,
+.sidebar.open ~ .about,
+.sidebar.open ~ .skills,
+.sidebar.open ~ .portfolio,
+.sidebar.open ~ .logo,
+.sidebar.open ~ .visitCard,
+.sidebar.open ~ .web,
+.sidebar.open ~ .photo,
+.sidebar.open ~ .confiance,
+.sidebar.open ~ .contact,
+.sidebar.open ~ .notfound,
+.sidebar.open ~ .footer {
+	left: 310px;
+	width: 100%;
+	transition: var(--trans-05);
+}
+
+.home .text,
+.about .text,
+.skills .text,
+.portfolio .text,
+.logo .text,
+.visitCard .text,
+.web .text,
+.photo .text,
+.confiance .text,
+.contact .text,
+.notfound .text {
+	font-size: 30px;
+	font-weight: 500;
+	color: var(--text-black);
+	padding: 8px 40px;
+}
+
+.text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.sidebar.open .text {
+	display: block;
+	transition: var(--trans-05);
+}
+
+.sidebar.open {
+	width: 310px;
+	transition: var(--trans-05);
+}
+
+.sidebar.active .image-text img {
+	visibility: visible;
+	transition: var(--trans-05);
+}
+
+.sidebar ul {
+	display: block;
+}
+
+.sidebar.active ul li .icon {
+	transform: translateY(0);
+	transition: var(--trans-05);
+}
+
+.sidebar.active li .text {
+	transform: translateY(0);
+	transition: var(--trans-02);
+}
+
+.sidebar a.active span {
+	color: var(--text-white);
+	font-weight: 500;
+}
+
+.logo-container button i,
+.photo-container button i,
+.visitCard-container button i,
+.web-container button i {
+	font-size: 30px;
+}
+}

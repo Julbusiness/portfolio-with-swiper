@@ -1,0 +1,28 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.oops {
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--text-black);
+  padding: 8px 40px;
+}
+
+.text {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.liens {
+  margin-top: 25px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+}

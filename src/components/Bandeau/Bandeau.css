@@ -1,0 +1,26 @@
+.bandeau-container {
+	position: relative;
+	height: 300px;
+	background: #191d20;
+}
+
+.bandeau-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+@media screen and (min-width: 768px) {
+	.bandeau-container {
+		position: relative;
+		height: 350px;
+		background: #191d20;
+	}
+	
+	.bandeau-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
